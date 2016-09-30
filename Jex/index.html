@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
+    <link rel="stylesheet" type="text/css" href="stylesheet.css.css">
     <title>Love</title>
 
     <script>
-    var audio, playbtn, seek_bar;
+    var audio, playbutton, seek_bar;
+
+    // function for song playing //
     function initAudioPlayer(){
         audio = new Audio();
         audio.src = "audio/song.mp3";
@@ -17,6 +19,7 @@
     </script>
 </head>
 <body>
-
+<button id="playpausebutton"></button>
+<button id="mutebutton"></button>
 </body>
 </html>
