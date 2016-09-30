@@ -15,7 +15,7 @@
         audio.loop = true;
         audio.play();
 
-        // objects
+        // object control
         playbutton = document.getElementById("playpausebutton");
 
         // add event
@@ -25,11 +25,11 @@
         function playpause(){
             if(audio.paused) {
                 audio.play();
-                playbutton.style.background = "url(images/pause.png) no-repeat";
+                playbutton.style.background = "url(images/start.png) no-repeat";
             }
             else{
                 audio.pause();
-                playbutton.style.background = "url(images/start.png) no-repeat";
+                playbutton.style.background = "url(images/pause.png) no-repeat";
             }
         }
 
