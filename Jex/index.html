@@ -6,7 +6,7 @@
     <title>Love</title>
 
     <script>
-    var audio, play, mute, seek_bar;
+    var audio, playbutton, seek_bar;
 
     // function for song playing
     function initAudioPlayer(){
@@ -14,29 +14,30 @@
         audio.src = "audio/song.mp3";
         audio.loop = true;
         audio.play();
+
         // objects
-        play = document.getElementById("playbutton");
-        mute = document.getElementById("mutebutton");
+        playbutton = document.getElementById("playpausebutton");
+
         // add event
-        play.addEventListener("click",playpause);
-        mute.addEventListener("click", playpause);
+        playbutton.addEventListener("click",playpause);
+
         //function
         function playpause(){
             if(audio.paused) {
                 audio.play();
-                play.style.background = "url(images/pause.png) no-repeat";
+                playbutton.style.background = "url(images/pause.png) no-repeat";
             }
             else{
                 audio.pause();
-                mute.style.background = "url(images/start.png) no-repeat";
+                playbutton.style.background = "url(images/start.png) no-repeat";
             }
         }
+
     }
         window.addEventListener("load", initAudioPlayer);
     </script>
 </head>
 <body>
-<button id="playbutton"></button>
-<button id="mutebutton"></button>
+<button id="playpausebutton"></button>
 </body>
 </html>

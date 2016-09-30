@@ -5,16 +5,14 @@ button{
     border:none;
     cursor:pointer;
     outline:none;
+    width:248px;
+    height:272px;
 }
 
-button#playbutton{
+button#playpausebutton{
     background:url(images/start.png)no-repeat;
-    width:248px;
-    height:272px;
 }
 
-button#mutebutton{
+button#pauseplaybutton{
     background:url(images/pause.png)no-repeat;
-    width:248px;
-    height:272px;
 }
