@@ -2,24 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <title>Love</title>
 
     <script>
-    var audio, playbutton, seek_bar;
+    var audio, play, mute, seek_bar;
 
-    // function for song playing //
+    // function for song playing
     function initAudioPlayer(){
         audio = new Audio();
         audio.src = "audio/song.mp3";
         audio.loop = true;
         audio.play();
+        // objects
+        play = document.getElementById("playbutton");
+        mute = document.getElementById("mutebutton");
+        // add event
+        play.addEventListener("click",playpause);
+        mute.addEventListener("click", playpause);
+        //function
+        function playpause(){
+            if(audio.paused) {
+                audio.play();
+                play.style.background = "url(images/pause.png) no-repeat";
+            }
+            else{
+                audio.pause();
+                mute.style.background = "url(images/start.png) no-repeat";
+            }
+        }
     }
         window.addEventListener("load", initAudioPlayer);
     </script>
 </head>
 <body>
-<button id="playpausebutton"></button>
+<button id="playbutton"></button>
 <button id="mutebutton"></button>
 </body>
 </html>

@@ -1,18 +1,20 @@
 body {
-    background:#000;
+    background:#ffffff;
 }
 button{
-    border:none; cursor:pointer;
+    border:none;
+    cursor:pointer;
+    outline:none;
 }
 
-button#playpausebutton{
-    background:url(images/play.png)no-repeat;
+button#playbutton{
+    background:url(images/start.png)no-repeat;
     width:248px;
     height:272px;
 }
 
 button#mutebutton{
-    background:url(images/pause.png);
+    background:url(images/pause.png)no-repeat;
     width:248px;
     height:272px;
 }
