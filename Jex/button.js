@@ -1,18 +1,15 @@
-var audio, playbutton, replaybutton;
-// function for song playing
-function initAudioPlayer(){
-    audio = new Audio();
-    audio.src = "audio/song.mp3";
-    audio.loop = true;
-    audio.play();
+var audio, playbutton, multiply;
 
-    // object control
+    function initAudioPlayer(){
+        audio = new Audio();
+        audio.src = "audio/song.mp3";
+        audio.loop = true;
+        audio.play();
+
     playbutton = document.getElementById("playpausebutton");
 
-    // add event
     playbutton.addEventListener("click",playpause);
 
-    //function
     function playpause(){
         if(audio.paused) {
             audio.play();
@@ -23,5 +20,13 @@ function initAudioPlayer(){
             playbutton.style.background = "url(images/pause.png) no-repeat";
         }
     }
+
+    function multiply(){
+        if (playpause(){
+
+            }
+        }
+    }
 }
+
 window.addEventListener("load", initAudioPlayer);
